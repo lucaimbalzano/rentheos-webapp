@@ -1,89 +1,531 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Rentheos a product developed by Luca Imbalzano">
+    <meta name="author" content="LucaImbalzano">
+    <title>Rentheos</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <!-- Bootstrap + main styles -->
+	<link rel="stylesheet" href="assets/css/creative-studio.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto p-3 m-2 bg-gradient bg-opacity-25 text-light fw-bold rounded bg-transparent bg-white">
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#affitti">Affitti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#conchilavoro">Con chi Lavoro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fader font-hq-navbar" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <div class="first-title">RENTHEOS</div>
+            <h6 class="subtitle"  style="letter-spacing: 12px;margin-top: 5px;margin-bottom: 80px;font-size: 14px;">REAL ESTATE</h6>
+            <div class="buttons text-center">
+                <a href="#service" class="btn btn-lblue rounded w-lg btn-lg my-1">Servizi</a>
+                <a href="#contact" class="btn btn-outline-light rounded w-lg btn-lg my-1">Contattaci</a>
+            </div>              
+        </div>      
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- About Section with bg: ENTUSIASMO -->
+    <section class="has-bg-img py-md">
+        <div class="container text-left">
+            <h6 class="section-title">RE · en · THEOS</h6>
+            <h6 class="section-subtitle  mb-4">/en·tu·ṣià·ṣmo/</h6>
+            <p>Real Estate Entusiasmo</p>
+            <p>entusiasmo /entu'zjazmo/ s. m. [dal greco enthousiasmós, “en” dentro + “thèos” Dio]</p>
+            <p>L’agenzia immobiliare con Dio dentro, 𝚛𝚎𝙣𝙩𝙝𝙚𝙤𝙨.</p>
+        </div>
+        <div class="container text-right">
+            <img src="assets/imgs/logo.png" height="48" width="70"
+        </div>
+    </section>
+    <!-- End Of About Sectoin -->
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 col-lg-4">
+                    <img src="assets/imgs/about.jpg" class="w-100 mb-3">
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h6 class="section-title mb-0">About</h6>
+                    <h6 class="section-subtitle mb-3">Chi siamo</h6>
+                    <p>Siamo Simone e Luca Imbalzano, di lavoro tiriamo fuori la personalità delle Case.</p>
+                    <p>Studiamo il modo migliore per valorizzare un appartamento ottenendo il massimo risultato. Vendite, Affitti e Gestioni di patrimoni immobiliari sono il nostro pane quotidiano.</p> 
+                    <p>Mettiamo insieme entusiasmo, il nostro primo amore, e competenza per raccogliere storie di successo. </p>
+                    <p>Storie diverse una dall’altra che sono il mezzo per impattare e cambiare il Mercato Immobiliare Italiano. </p> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- About Section with bg -->
+    <section class="has-bg-img py-md">
+        <div class="container text-center">
+            <h6 class="section-title mb-4"> <i class="ti-notepad"></i> Perché sei qui?</h6> 
+            <div class="widget mb-4">
+                    <p>Si tu, dico a te.</p>
+                    <p>Se ti conosco un po’, stai leggendo chi sono perché vuoi fare sul serio con il tuo immobile e capire se sono quello giusto per te: hai deciso di vendere o affittare la tua proprietà ed è arrivato il momento di farlo davvero. </p>
+                    <p>La tua casa se lo merita, tu te lo meriti perché hai fatto delle scelte che ti sono costate fatica ed è arrivato il momento di comprendere TUTTE le migliori soluzioni che offre il Mercato Immobiliare</p>
+             
+            </div>
+        </div>
+    </section>
+    <!-- End Of About Sectoin -->
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-9">
+                        <h6 class="section-title mb-4">Crediamoci assieme</h6>
+                        <p>Io voglio essere quel ponte che ti porta dal mondo del dubbio e dell’incertezza, all’entusiasmo di aver fatto la scelta migliore.</p>
+                        <p>Ma manca ancora un po’, mancano dei passi importanti. Ti serve un analisi dettagliata per capire tutte le soluzioni che offre il mercato, ti serve un piano di rendimento e una valutazione per sapere quanto ci puoi guadagnare,</p>
+                        <p>ti serve un professionista che sappia snocciolarti ogni questione burocratica, amministrativa, commerciale, urbanistica, catastale…</p>
+                        <p>Posso portarti li, più vicino al tuo obiettivo, rendere più concreto il tuo desiderio, fartelo toccare.</p>
+                        <p>Insieme possiamo essere fortissimi.</p>
+                    </div>
+                    <div class="col-md-5 col-lg-3">
+                        <div class="widget mb-4">
+                            <div class="widget-item">
+                                <i class="ti-face-smile"></i>
+                                <h4 style="color:#0c9ee6">assieme</h4>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <!-- End of About Section -->
+
+
+    <!-- Service Section -->
+    <section id="service">
+        <div class="container text-center">
+          <h5 class="section-title">Servizi</h5> 
+          <h6 class="section-subtitle mb-5">contattaci per saperne di piú</h6>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-5">
+                <div class="card-body">
+                  <h2><i class="ti-key text-primary"></i></h2>
+                  <h6 class="card-title">𝗩𝗲𝗻𝗱𝗶𝘁𝗮 𝗱𝗶 𝗜𝗺𝗺𝗼𝗯𝗶𝗹𝗶</h6>
+                  <p>Realizziamo il Massimo possibile attraverso il Metodo Open House e la Collaborazione con centinaia di Agenzie.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card mb-5">
+                <div class="card-body">
+                  <h2><i class="ti-ruler-pencil text-primary"></i></h2>
+                  <h6 class="card-title">𝗖𝗼𝗻𝘀𝘂𝗹𝗲𝗻𝘇𝗮 𝗦𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗰𝗮 𝗚𝗿𝗮𝘁𝘂𝗶𝘁𝗮</h6>
+                  <p>Otterrai, GRATUITAMENTE, <br> una valutazione con almeno 3 immobili venduti negli ultimi 6 mesi simili al tuo ed un Piano di Rendimento annuale per quanto riguarda l’Affitto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card mb-5">
+                <div class="card-body">
+                  <h2><i class="ti-wallet text-primary"></i></h2>
+                  <h6 class="card-title">𝗚𝗲𝘀𝘁𝗶𝗼𝗻𝗲 𝗣𝗮𝘁𝗿𝗶𝗺𝗼𝗻𝗶 𝗜𝗺𝗺𝗼𝗯𝗶𝗹𝗶𝗮𝗿𝗶</h6>
+                  <p>Gestiamo diverse unità immobiliari di clienti terzi con l’unico scopo di garantire la massima sicurezza e il miglior guadagno.</p>
+                </div>
+              </div>
+            </div> 
+            <div class="col-sm-6">
+                <div class="card mb-5">
+                  <div class="card-body">
+                    <h2><i class="ti-home text-primary"></i></h2>
+                    <h6 class="card-title">𝗔𝗳𝗳𝗶𝘁𝘁𝗶</h6>
+                    <p>Affitti brevi, Affitti a Studenti fuori sede, affitti a professionisti, affitti a società e molto altro. <br> Capiamo economicamente e fiscalmente qual é la soluzione migliore per te gestendo tutta la parte operativa al 100%.</p>
+                  </div>
+                </div>
+              </div>      
+        </div>
+    </section>
+    <!-- End of Service Section -->   
+
+
+    <!-- Portfolio section -->
+    <section id="affitti">
+        <div class="container text-center">
+            <h6 class="section-title">Affitti</h6>
+            <h6 class="section-subtitle  mb-5">locazioni brevi | 4+4 | transitori</h6>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/Venezuela.jpg" >
+                        <div class="overlay">   
+                            <div class="overlay-infos">
+                                <h5>San Siro</h5>
+                                <a href="https://goo.gl/maps/BCcd4jd3gKsCfH9fA"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/palmanova.jpg">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Palmanova</h5>
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%20Ti%20scrivo%20per%20avere%20maggiori%20informazioni%20relative%20a%20palmanova%20per%20affitti%20%F0%9F%98%8A"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/galeno-big.jpg">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Galeno (II)</h5>
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%20Ti%20scrivo%20per%20avere%20maggiori%20informazioni%20relative%20all%27appartamento%20di%20Via%20Galeno%2010(II)%20,%20per%20affitti%F0%9F%98%8A"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/galeno-small.jpg">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Galeno (I)</h5>
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%20Ti%20scrivo%20per%20avere%20maggiori%20informazioni%20relative%20all%27appartamento%20di%20Via%20Galeno%2010(I)%20,%20per%20affitti%F0%9F%98%8A"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/prinetti.jpg">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Prinetti</h5>
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%20Ti%20scrivo%20per%20avere%20maggiori%20informazioni%20relative%20all%27appartamento%20di%20Via%20Prinetti%20per%20affitti%F0%9F%98%8A"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/affitti/gluck.jpg">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Gluck</h5>
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%20Ti%20scrivo%20per%20avere%20maggiori%20informazioni%20relative%20all%27appartamento%20di%20Via%Gluck%20per%20affitti%F0%9F%98%8A""><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of portfolio section -->
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Team</h6>
+            <h6 class="section-title mb-5 text-center">I nostri Agenti</h6>
+            <div class="row">
+                <div class="col-9-sm-9 col-md-6">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top" src="assets/imgs/avatar.jpeg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">REAL ESTATE AGENT</h6>
+                            <h5 class="card-title">Simone Imbalzano</h5>
+                            <p>Nel campo Immobiliare da 7 anni, ha lavorato come consulente immobiliare ed esperto di marketing freelance per diverse agenzie milanesi.</p>
+                            <p>É stato direttore commerciale di uno dei brand più importanti di affitti brevi in Italia.</p>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/profile.php?id=100073460551821"><i class="ti-facebook"></i> </a>
+                                <a href="https://api.whatsapp.com/send?phone=393486049869&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20rentheos.it%20%F0%9F%98%8A"><img src="assets/imgs/contacts/svg-whatsapp.svg" width="23" height="23" style="margin-bottom: 8px;"></a>
+                                <a href="mailto:info@rentheos.it;"><i class="ti-email"></i></a>
+                                <a href="https://www.instagram.com/il.tuo.agente.immobiliare/"><i class="ti-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9-sm-9 col-md-6">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top" src="assets/imgs/avatar-1.png">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">PROPERTY MANAGER & SOFTWARE DEVELOPER</h6>
+                            <h5 class="card-title">Luca Imbalzano</h5>
+                            <p>Sviluppatore software per vari clienti come Accenture, Reply, Aicof, Brico, OpenFiber, Vodafone e Intesa San Paolo.</p>
+                            <p>Gestisco l’operatività di tutta l’azienda creando software gestionali e commerciali per portare Rentheos sempre più in alto. </p>
+                            <div class="socials">
+                                <a href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20rentheos.it%20%F0%9F%98%8A"><img src="assets/imgs/contacts/svg-whatsapp.svg" width="23" height="23" style="margin-bottom: 8px;"></a>
+                                <a href="mailto:info@rentheos.it;"><i class="ti-email"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Team Sectoin -->
+
+    <!-- Fatcs Section -->
+    <section class="has-bg-img bg-img-2">
+        <div class="container text-center">
+            <h6 class="section-subtitle"><span class="first-title">RENTHEOS</span></h6>
+            <h6 class="section-title mb-6">Partners</h6>
+                <div class="widget-2">
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/airbnb.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/googlemaps.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/idealista.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/bookingcom.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/immobiliareit.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/vrbo.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <a href="javascript:void(0)"><img src="assets/imgs/partners/housenet.png" width="84" height="84" 
+                            style="padding-bottom: 5px;"></a>
+                    </div>
+                    <div class="widget-item">
+                        <h6 class="section-title" style="margin-top: 20%;">Hevirox</h6>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+<!-- Testimonial Section | con chi lavoro -->
+    <section id="conchilavoro" style="background-color: #FFF;">
+        <div class="container">
+            <h6 class="section-subtitle text-center">con chi</h6>
+            <h6 class="section-title text-center mb-6">Lavoro</h6>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="assets/imgs/simo.png" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="mt-md-0 mt-5">
+                        <p>Lavoro con chi ha una reale esigenza di vendita ed è entusiasta all’idea di trovare la sua futura casa.</p>
+                        <p>Lavoro con aziende con un patrimonio immobiliare, desiderose di guadagnare almeno il 7% annuo e avere lo 0% di rischi di morosità.</p>
+                        <p>Lavoro con proprietari di immobili gentili che vogliono affittare ed essere sicuri al 100% di percepire il proprio canone.</p>
+                    </div>
+                    <div class="buttons text-right">
+                        <a class="btn btn-lblue rounded-lg w-lg btn-lg my-1" href="https://api.whatsapp.com/send?phone=393486049869&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20www.rentheos.it,%20vorrei%20lavorare%20con%20voi!"><i class="ti-control-play"></i> 𝗹𝗮𝘃𝗼𝗿𝗮 𝗰𝗼𝗻 𝗻𝗼𝗶</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- End of Testimonial Section -->
+
+
+    <!-- Video Section -->
+    <section class="has-bg-img py-lg">
+        <div class="container text-center">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary play-control" data-toggle="modal" data-target="#exampleModalCenter">
+              <i class="ti-instagram" style="margin-right: 9px;"></i>
+            </button>
+            <h6 class="section-title mt-4">Guarda i nostri video sull'immobiliare!</h6>
+
+        </div>
+    </section>
+    <!-- End of Video Section -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" style="position: absolute; top: 80px; left: 10px; z-index: 999;">Close</button>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Cnep2LdKR_9/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/Cnep2LdKR_9/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/Cnep2LdKR_9/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Simone Imbalzano (@il.tuo.agente.immobiliare)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- end of modal -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+        <div class="contact-card">
+            <div class="infos">
+                <h6 class="section-title mb-4">Per qualsiasi domanda</h6>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p> Viale Certosa 218, Milan Italy</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>info@rentheos.it</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-world"></i>
+                        <div class="mb-0">
+                            <h5><a href="https://www.rentheos.it">rentheos.it</a></h5>
+                        </div>
+                    </div>
+            </div>
+            <div class="form">
+                <h6 class="section-title">Contattaci</h6>
+                <h6 class="section-subtitle mb-4">Available 24/7</h6>
+                <form>
+                    <h6 class="subtitle">Simone Imbalzano</h6>
+                    <div class="item">
+                        <a aria-label="Chat on Facebook" style="text-decoration:none;" href="https://www.facebook.com/profile.php?id=100073460551821"><img src="assets/imgs/contacts/fb.jpg" width="48" height="48" style="margin:5px;"> </a>
+                    <a aria-label="Chat on WhatsApp" style="text-decoration:none;" href="https://api.whatsapp.com/send?phone=393486049869&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20rentheos.it%20%F0%9F%98%8A"><img src="assets/imgs/contacts/whatsapp.jpg" width="48" height="48" style="margin:5px;"> </a>
+                    <a aria-label="Chat on Mail" style="text-decoration:none;" href="mailto:info@rentheos.it;"><img src="assets/imgs/contacts/gmail.jpg" width="61" height="48" style="margin:5px;"> </a>
+                    <a aria-label="Chat on Instagram" style="text-decoration:none;" href="https://www.instagram.com/il.tuo.agente.immobiliare/"><img src="assets/imgs/contacts/instalogo.jpg" width="48" height="48" style="margin:5px;"> </a>   
+                    <a aria-label="Chat on Mail" style="text-decoration:none;" href="tel:+393486049869""><img src="assets/imgs/contacts/dialcall.jpg" width="55" height="55" style="margin:5px;"> </a>
+                    </div>
+                    <br>
+                    <h6 class="subtitle">Luca Imbalzano</h6>
+                    <div class="item">
+                        <a aria-label="Chat on WhatsApp" style="text-decoration:none;" href="https://api.whatsapp.com/send?phone=393518279265&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20rentheos.it%20%F0%9F%98%8A"><img src="assets/imgs/contacts/whatsapp.jpg" width="48" height="48" style="margin:5px;"> </a>
+                    <a aria-label="Chat on Mail" style="text-decoration:none;" href="mailto:info@rentheos.it;"><img src="assets/imgs/contacts/gmail.jpg" width="61" height="48" style="margin:5px;"> </a>
+                    <a aria-label="Chat on Mail" style="text-decoration:none;" href="tel:+393518279265""><img src="assets/imgs/contacts/dialcall.jpg" width="55" height="55" style="margin:5px;"> </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+
+
+<!-- Footer Section -->
+    <section class="has-bg-img py-0">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-lists">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ABOUT US</h6>
+                        </li>
+                        <li class="list-body">
+                            <a href="#" class="logo">
+                                <img src="assets/imgs/logo.png" alt="Rentheos Revolutionaries">
+                                <h6>Rentheos</h6>
+                            </a>
+                            <p>L’agenzia immobiliare con Dio dentro, 𝚛𝚎𝙣𝙩𝙝𝙚𝙤𝙨.</p>
+                            <p class="mt-3">
+                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" href="www.rentheos.it">Luca Imbalzano</a>
+                            </p>                   
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">USEFUL LINKS</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#about">About</a>
+                                    <a href="#service">Service</a>
+                                    <a href="#affitti">Affitti</a>
+                                    <a href="#conchilavoro">Con chi lavoro</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#team">Team</a>
+                                    <!-- <a href="#">Privacy Policy</a>                   -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">CONTACT INFO</h6>
+                        </li>
+                        <li class="list-body">
+                            <p>Contattaci e ti risponderemo entro 24 ore.</p>
+                            <p><i class="ti-location-pin"></i>Viale Certosa 218, Milan Italy</p>
+                            <p><i class="ti-email"></i>  info@rentheos.it</p>
+                            <div class="social-links">
+                                <a aria-label="Chat on Facebook" style="text-decoration:none; color:#0c9ee6" href="https://www.facebook.com/profile.php?id=100073460551821"><img src="assets/imgs/contacts/svg-facebook.svg" width="34" height="34"> </a>
+                                <a aria-label="Chat on WhatsApp" href="https://api.whatsapp.com/send?phone=393486049869&text=Ciao!%0ATi%20contatto%20tramite%20il%20sito%20di%20rentheos.it%20%F0%9F%98%8A"><img src="assets/imgs/contacts/svg-whatsapp.svg" style="color: #0c9ee6;" width="30" height="30"></a>
+                                <a aria-label="Chat on Instagram" href="https://www.instagram.com/il.tuo.agente.immobiliare/"><img src="assets/imgs/contacts/svg-instagram.svg" style="color:#0c9ee6" width="30" height="30"></a>
+                                <a aria-label="Chat on Tiktok" href="https://www.tiktok.com/@il.tuo.agenteimmobiliare"><img src="assets/imgs/contacts/svg-tiktok.svg" style="color: #0c9ee6;" width="30" height="30"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </section>
+<!-- End Footer Section -->
+
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    
+    <!-- bootstrap bundle -->
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="assets/js/creative-studio.js"></script>
+</body>
 </html>
