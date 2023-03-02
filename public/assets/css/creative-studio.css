@@ -586,6 +586,11 @@ pre code {
   overflow-y: scroll;
 }
 
+.text-center-container {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -593,6 +598,12 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (max-width: 385px) and  (min-width: 200px) {
+  .button-servizi {
+    width: 100%;
+    font-size: 15px;
+  }
 
 @media (min-width: 576px) {
   .container {
